@@ -102,35 +102,27 @@ Debt Consolidation & Medical loans have the highest default rates
 
 High loan-to-income ratio significantly increases default probability
 
-Prior defaults strongly amplify risk even for moderate loan amounts
+![](https://github.com/JayaraniArunachalam/Credit_Risk_Databricks_Capstone/blob/main/Diagrams/Avg%20Loan%20to%20Income%20Percent%20Vs%20Default%20risk.png)
 
 ---
 
-6️⃣ Model Selection & Technical Reasoning
-🤖 Model Chosen
+## 6️⃣ Model Selection & Technical Reasoning
+
+**Model Chosen**
 
 Logistic Regression
 
-✅ Why Logistic Regression?
+**Why Logistic Regression?**
 
-Industry standard for credit scoring
-
-Highly interpretable
-
-Stable baseline
-
-Works well with linear risk factors
-
-⚠️ Limitations
-
-Cannot capture complex non-linear interactions
-
-Threshold tuning required to manage business trade-offs
+- Industry standard for credit scoring
+- Highly interpretable
+- Stable baseline
+- Works well with linear risk factors
 
 ---
 
-7️⃣ Training, Evaluation & Metrics
-🔄 Training Setup
+## 7️⃣ Training, Evaluation & Metrics
+**🔄 Training Setup**
 
 80/20 Train-Test Split
 
