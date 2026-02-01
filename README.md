@@ -137,6 +137,8 @@ MLflow is used for experiment tracking
 - Precision	Controls false approvals
 - Recall	identifies risky borrowers
 
+![](https://github.com/JayaraniArunachalam/Credit_Risk_Databricks_Capstone/blob/main/Diagrams/metrics.jpg)
+
 **Evaluation Results**
 
 ROC Curve shows strong separation
