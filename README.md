@@ -122,25 +122,28 @@ Logistic Regression
 ---
 
 ## 7️⃣ Training, Evaluation & Metrics
-**🔄 Training Setup**
+**Training Setup**
 
 80/20 Train-Test Split
 
 Features sourced directly from Gold Delta tables
 
-MLflow used for experiment tracking
+MLflow is used for experiment tracking
 
-📏 Metrics Used
-Metric	Purpose
-AUC	Model discrimination
-Accuracy	Overall correctness
-Precision	Controls false approvals
-Recall	Identifies risky borrowers
-📊 Evaluation Results
+**📏 Metrics Used**
+- Metric	Purpose
+- AUC	Model discrimination
+- Accuracy: Overall correctness
+- Precision	Controls false approvals
+- Recall	identifies risky borrowers
+
+**Evaluation Results**
 
 ROC Curve shows strong separation
+![](https://github.com/JayaraniArunachalam/Credit_Risk_Databricks_Capstone/blob/main/Diagrams/ROC%20curve%20Credit%20Risk%20Dataset.png)
 
-Confusion Matrix highlights trade-off between growth and risk
+Confusion Matrix highlights the trade-off between growth and risk
+![](https://github.com/JayaraniArunachalam/Credit_Risk_Databricks_Capstone/blob/main/Diagrams/Confusion%20Matrix.png)
 
 ---
 
