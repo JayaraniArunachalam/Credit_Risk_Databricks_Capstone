@@ -18,6 +18,8 @@ Build an AI-powered credit risk system that:
 
 - ML Task: Binary Classification
 - Target Variable: loan_status (0 = Non-Default, 1 = Default)
+  
+---
 
 ## 2️⃣ Dataset Understanding
 **Dataset Overview**
@@ -46,36 +48,33 @@ Customer details required for loan processing
 - Outliers in `person_emp_length`
 - Unreasonable `person_age` values (e.g., 123, 144)
 
+---
+
 3️⃣ Data Architecture (Medallion Pattern)
 Bronze → Silver → Gold
 
-🟤 Bronze
+**🟤Bronze**
 
-Raw CSV ingestion
+- Raw CSV ingestion
+- Schema-on-read
+- Delta Lake storage
 
-Schema-on-read
+**⚪ Silver**
 
-Delta Lake storage
+- Data cleaning & validation
+- Outlier handling
+- Business-rule-based imputations
 
-⚪ Silver
+**🟡 Gold**
 
-Data cleaning & validation
+- Feature engineering
+- Analytics-ready dataset
+- ML-ready dataset
+- Prediction & decision outputs
 
-Outlier handling
+---
 
-Feature engineering
-
-Business-rule based imputations
-
-🟡 Gold
-
-Analytics-ready dataset
-
-ML-ready dataset
-
-Prediction & decision outputs
-
-4️⃣ Feature Engineering
+## 4️⃣ Feature Engineering
 🔧 Cleaning & Rules
 
 Removed unrealistic ages (>75)
@@ -95,7 +94,9 @@ Else 0
 
 Combined risk factors are more predictive than isolated attributes and closely mirror real-world banking risk assessment.
 
-5️⃣ Insight Generation (Business Analytics)
+---
+
+## 5️⃣ Insight Generation (Business Analytics)
 📈 Key Insights
 
 Debt Consolidation & Medical loans have the highest default rates
@@ -111,6 +112,8 @@ Loan Intent vs Default Rate
 Confusion Matrix
 
 ROC Curve
+
+---
 
 6️⃣ Model Selection & Technical Reasoning
 🤖 Model Chosen
@@ -133,6 +136,8 @@ Cannot capture complex non-linear interactions
 
 Threshold tuning required to manage business trade-offs
 
+---
+
 7️⃣ Training, Evaluation & Metrics
 🔄 Training Setup
 
@@ -154,6 +159,8 @@ ROC Curve shows strong separation
 
 Confusion Matrix highlights trade-off between growth and risk
 
+---
+
 8️⃣ Risk Scoring & Decision Logic
 🧠 Decision Framework
 Default Probability	Decision
@@ -164,11 +171,17 @@ Default Probability	Decision
 
 High-risk loan intents (Medical, Debt Consolidation) are routed to manual review even when model confidence is moderate.
 
-9️⃣ End-to-End AI Workflow
-Delta Tables → Feature Extraction → ML Model → Risk Scoring → Decisions → Stored Back to Delta
+---
 
+9️⃣ End-to-End AI Workflow
+
+![Data Architecture](https://github.com/JayaraniArunachalam/Credit_Risk_Databricks_Capstone/blob/main/Diagrams/Credit%20risk%20AI%20model%20dataarchitecture%20databricks.jpg)
+
+**Delta Tables → Feature Extraction → ML Model → Risk Scoring → Decisions → Stored Back to Delta**
 
 This ensures full database ↔ AI integration.
+
+---
 
 🔟 Business Impact
 
