@@ -140,9 +140,12 @@ MLflow is used for experiment tracking
 **Evaluation Results**
 
 ROC Curve shows strong separation
+
 ![](https://github.com/JayaraniArunachalam/Credit_Risk_Databricks_Capstone/blob/main/Diagrams/ROC%20curve%20Credit%20Risk%20Dataset.png)
 
+
 Confusion Matrix highlights the trade-off between growth and risk
+
 ![](https://github.com/JayaraniArunachalam/Credit_Risk_Databricks_Capstone/blob/main/Diagrams/Confusion%20Matrix.png)
 
 ---
