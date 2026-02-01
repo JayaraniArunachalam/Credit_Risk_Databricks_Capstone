@@ -147,19 +147,20 @@ Confusion Matrix highlights the trade-off between growth and risk
 
 ---
 
-8️⃣ Risk Scoring & Decision Logic
-🧠 Decision Framework
+## 8️⃣ Risk Scoring & Decision Logic
+**Decision Framework**
 Default Probability	Decision
 < 0.30	APPROVE
 0.30 – 0.60	REVIEW
 ≥ 0.60	REJECT
-🔗 Human-in-the-Loop
+
+**🔗 Human-in-the-Loop**
 
 High-risk loan intents (Medical, Debt Consolidation) are routed to manual review even when model confidence is moderate.
 
 ---
 
-9️⃣ End-to-End AI Workflow
+## 9️⃣ End-to-End AI Workflow
 
 **Delta Tables → Feature Extraction → ML Model → Risk Scoring → Decisions → Stored Back to Delta**
 
@@ -167,7 +168,7 @@ This ensures full database ↔ AI integration.
 
 ---
 
-🔟 Business Impact
+## 🔟 Business Impact
 
 Reduced false approvals
 
