@@ -52,7 +52,7 @@ Customer details required for loan processing
 
 ## 3️⃣ Data Architecture (Medallion Pattern)
 
-Bronze → Silver → Gold
+![Data Architecture](https://github.com/JayaraniArunachalam/Credit_Risk_Databricks_Capstone/blob/main/Diagrams/Credit%20risk%20AI%20model%20dataarchitecture%20databricks.jpg)
 
 **🟤Bronze**
 
@@ -165,8 +165,6 @@ High-risk loan intents (Medical, Debt Consolidation) are routed to manual review
 ---
 
 9️⃣ End-to-End AI Workflow
-
-![Data Architecture](https://github.com/JayaraniArunachalam/Credit_Risk_Databricks_Capstone/blob/main/Diagrams/Credit%20risk%20AI%20model%20dataarchitecture%20databricks.jpg)
 
 **Delta Tables → Feature Extraction → ML Model → Risk Scoring → Decisions → Stored Back to Delta**
 
