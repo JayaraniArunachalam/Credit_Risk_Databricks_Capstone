@@ -50,7 +50,8 @@ Customer details required for loan processing
 
 ---
 
-3️⃣ Data Architecture (Medallion Pattern)
+## 3️⃣ Data Architecture (Medallion Pattern)
+
 Bronze → Silver → Gold
 
 **🟤Bronze**
@@ -75,43 +76,33 @@ Bronze → Silver → Gold
 ---
 
 ## 4️⃣ Feature Engineering
-🔧 Cleaning & Rules
 
-Removed unrealistic ages (>75)
+**Cleaning & Rules**
 
-Removed employment length > 60
+- Removed unrealistic ages (>75)
+- Removed employment length > 60
+- Imputed missing interest rates using median by loan grade & intent
 
-Imputed missing interest rates using median by loan grade & intent
+**Engineered Feature**
 
-🔥 Engineered Feature
+prior_default_high_risk_flag -- 1 if (previous default = YES) AND (loan_percent_income > 0.4) Else 0
 
-prior_default_high_risk_flag
-
-1 if (previous default = YES) AND (loan_percent_income > 0.4)
-Else 0
-
-🧠 Why This Feature Matters
+**Why This Feature Matters**
 
 Combined risk factors are more predictive than isolated attributes and closely mirror real-world banking risk assessment.
 
 ---
 
 ## 5️⃣ Insight Generation (Business Analytics)
-📈 Key Insights
+**📈 Key Insights**
 
 Debt Consolidation & Medical loans have the highest default rates
+
+![](https://github.com/JayaraniArunachalam/Credit_Risk_Databricks_Capstone/blob/main/Diagrams/Loan%20Intent%20Vs%20Avg%20Default%20Rate.png)
 
 High loan-to-income ratio significantly increases default probability
 
 Prior defaults strongly amplify risk even for moderate loan amounts
-
-📊 Visuals Used
-
-Loan Intent vs Default Rate
-
-Confusion Matrix
-
-ROC Curve
 
 ---
 
